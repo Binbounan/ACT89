@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="25" column="1">
+        <widget class="QPushButton" name="btnVerNeuronas">
+         <property name="text">
+          <string>Ver Neuronas</string>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="1">
+        <widget class="QPushButton" name="btnAgregarFinal">
+         <property name="text">
+          <string>Agregar Final</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="campoVoltaje"/>
+       </item>
+       <item row="20" column="0">
+        <widget class="QLabel" name="labelBlue">
+         <property name="text">
+          <string>Blue</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelId">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="labelVoltaje">
+         <property name="text">
+          <string>Voltaje</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="0">
+        <widget class="QLabel" name="labelGreen">
+         <property name="text">
+          <string>Green</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="campoPosY"/>
+       </item>
+       <item row="20" column="1">
+        <widget class="QLineEdit" name="campoBlue"/>
+       </item>
+       <item row="21" column="1">
+        <widget class="QPushButton" name="btnAgregarInicio">
+         <property name="text">
+          <string>Agregar Inicio</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="labelRed">
+         <property name="text">
+          <string>Red</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="labelPosX">
+         <property name="text">
+          <string>Posicion X</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="campoPosX"/>
+       </item>
+       <item row="14" column="1">
+        <widget class="QLineEdit" name="campoRed"/>
+       </item>
+       <item row="18" column="1">
+        <widget class="QLineEdit" name="campoGreen"/>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="labelPosY">
+         <property name="text">
+          <string>Posicion Y</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="campoId"/>
+       </item>
+       <item row="26" column="1">
+        <widget class="QPushButton" name="GuardarN">
+         <property name="text">
+          <string>Guardar</string>
+         </property>
+        </widget>
+       </item>
+       <item row="27" column="1">
+        <widget class="QPushButton" name="RecuperarN">
+         <property name="text">
+          <string>Recuperar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPlainTextEdit" name="neuronasInfo">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>473</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
