@@ -44,6 +44,17 @@ void AdminNeurona::guardarNeuronasEnArchivo(const QString &filePath) {
     file.close();
 }
 
+Neurona AdminNeurona::buscarNeuronaPorId(int id) const {
+    for (const Neurona &neurona : listaNeuronas) {
+        if (neurona.getId() == id) {
+
+            return neurona;
+        }
+    }
+    return Neurona(0, 0.0, 0, 0, 0, 0, 0);
+}
+
+
 void AdminNeurona::recuperarNeuronasDesdeArchivo(const QString &filePath) {
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -75,4 +86,5 @@ void AdminNeurona::recuperarNeuronasDesdeArchivo(const QString &filePath) {
 
     file.close();
 }
-//const QList<Neurona>& getListaNeuronas();
+
+

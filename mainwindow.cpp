@@ -184,3 +184,56 @@ void MainWindow::on_RecuperarN_clicked()
     }
 }
 
+
+void MainWindow::on_BotonBuscar_clicked()
+{
+
+    QString idTexto = ui->aidi1->text();
+    int id = idTexto.toInt();
+
+
+    Neurona neuronaEncontrada = administrador.buscarNeuronaPorId(id);
+
+
+    if (neuronaEncontrada.getId() != -1) {
+
+        QString informacionNeurona = "ID: " + QString::number(neuronaEncontrada.getId()) +
+                                     "\nVoltaje: " + QString::number(neuronaEncontrada.getVoltaje()) +
+                                     "\nPosición: (" + QString::number(neuronaEncontrada.getPosX()) + ", " +
+                                     QString::number(neuronaEncontrada.getPosY()) + ")" +
+                                     "\nRGB: (" + QString::number(neuronaEncontrada.getRed()) + ", " +
+                                     QString::number(neuronaEncontrada.getGreen()) + ", " +
+                                     QString::number(neuronaEncontrada.getBlue()) + ")";
+        ui->aidi->setPlainText(informacionNeurona);
+    } else {
+        ui->aidi->setPlainText("No se encontró ninguna neurona con el ID especificado.");
+    }
+}
+
+
+void MainWindow::on_grafica_clicked()
+{
+
+
+    // Obtener la lista de neuronas desde el administrador
+    const QList<Neurona>& neuronas = administrador.getListaNeuronas();
+
+     scene.clear();
+
+    for (const Neurona &N : neuronas) {
+
+
+        QColor c(N.getRed(), N.getGreen(), N.getBlue());
+        QPen pen(c);
+        QBrush brush(c, Qt::CrossPattern);
+
+        // Dibujar la neurona como un elipse en la escena
+        scene.addEllipse(N.getPosX(), N.getPosY(), N.getVoltaje(), N.getVoltaje(), pen, brush);
+    }
+
+
+    ui->dibujo->setScene(&scene);
+
+
+}
+

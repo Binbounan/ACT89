@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "adminneurona.h"
 #include <QPlainTextEdit>
+#include <QGraphicsScene>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,11 +31,14 @@ private slots:
 
     void on_RecuperarN_clicked();
 
-    void on_pushButton_clicked();
+    void on_BotonBuscar_clicked();
+
+    void on_grafica_clicked();
 
 private:
     Ui::MainWindow *ui;
     AdminNeurona administrador;
     QPlainTextEdit *neuronasTextEdit;
+    QGraphicsScene scene;
 };
 #endif // MAINWINDOW_H

@@ -3,6 +3,8 @@
 #include <Qlist>
 #include "neurona.h"
 
+
+
 class AdminNeurona
 {
 private:
@@ -14,6 +16,8 @@ public:
     QString obtenerInformacionNeuronas() const;
     void guardarNeuronasEnArchivo(const QString &filePath);
     void recuperarNeuronasDesdeArchivo(const QString &filePath);
+    Neurona buscarNeuronaPorId(int id) const;
+
     const QList<Neurona>& getListaNeuronas() const {
         return listaNeuronas;
     }
